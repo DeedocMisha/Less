@@ -1,0 +1,11 @@
+npm install -g less
+npm install -D less
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+<script src="https://cdn.jsdelivr.net/npm/less" ></script>
+
+install Less extantion
+
+create dir css
+create file styles.less
+create file styles.css and styles.cpp.map into file styles.less
+

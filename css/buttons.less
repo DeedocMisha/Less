@@ -1,0 +1,31 @@
+@import "mixins";
+// main : styles.less
+.btn {
+  span{
+    color: #fff;
+  }
+  border-color: green;
+  border-width: 3px;
+  transition: border-color 0.2s linear; // Изменено на border-color
+  &:hover,
+  &:focus {
+    border-color: darken(green, 5%) ; // Убедитесь, что это дает ожидаемый цвет
+    border-width: 3px ;
+  }
+  //Когда disabled кнопки кот в контейн должна быть прозрачной
+  .disabled & {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+  // Создаем доп ключ для доп хар-к
+  // & это повторение пути .btn
+  &--primary {
+    border-color: white;
+    border-width: 3px;
+  }
+  &--function{
+    .btn(yellow);
+  }
+
+}
+

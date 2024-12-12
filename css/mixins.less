@@ -1,0 +1,17 @@
+
+// main : styles.less
+// Файл для функций!!!!
+
+.btn(@fcolor) {
+  background-color: @fcolor;
+
+  // Применяем условие только для светлых цветов
+  & when (lightness(@fcolor) > 50) {
+    color: white;
+  }
+
+  // Добавление стилей для темных цветов
+  & when (lightness(@fcolor) <= 50) {
+    color: black; // Предположим, что для темных цветов текст будет белым
+  }
+}
